@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Faheem Nizar</title>
+
+    <meta name="author" content="Faheem Nizar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Faheem Nizar
+                </p>
+                <p>
+                  I'm a Senior Associate (Data Scientist) at <a href="https://www.pwc.com/us/en.html">PwC US</a> in Bengaluru. I build agentic AI systems, and I lead a small group that tests robot foundation models for safety. That work led PwC to set up a robotics lab with <a href="https://www.trossenrobotics.com/widowx-250">WidowX</a> arms.
+                  At PwC I have also worked on tool and agent retrieval for LLM multi-agent systems, prompt caching, text-to-3D character motion, and causal knowledge graphs for anomaly detection.
+                </p>
+                <p>
+                  I did my B.Tech in Electrical Engineering, with a minor in Machine Learning, at <a href="https://www.iitk.ac.in/">IIT Kanpur</a>. There I worked with <a href="https://www.cse.iitk.ac.in/users/soumyad/">Soumya Dutta</a> on uncertainty in deep image synthesis, with <a href="https://home.iitk.ac.in/~sandhan/">Tushar Sandhan</a> on graph deep learning for fault prediction, and with <a href="https://home.iitk.ac.in/~gkrabhi/">Abhishek K. Gupta</a> on UAV antenna tracking as a SURGE scholar.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:faheemnizar01@gmail.com">Email</a> &nbsp;/&nbsp;
+                  <a href="data/FaheemNizar-CV.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=T7v57eMAAAAJ">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/faheem-nizar-20a716206">LinkedIn</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images/FaheemNizar.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/FaheemNizar.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>
+                  I work on 3D scene understanding, embodied computer vision, and robot learning. Most of my projects come back to the same question. How can we tell when a learned system is about to fail, and how can we make it more reliable? For robots this matters a lot, because a wrong prediction can turn into an unsafe action.
+                </p>
+                <p>
+                  Right now I want to study how vision-language-action models (VLAs) and world action models represent the physical world, and how to detect when they are likely to fail in an unfamiliar environment. I think 3D scene representations can help here. Geometry and spatial relationships learned from images and video could help policies handle new objects and tasks.
+                  I am also interested in uncertainty estimation under distribution shift, red-teaming robot policies before deployment, physics-aware world models, motion planning, and 3D motion generation. On the practical side, I care about making large models fast and cheap enough to run in real time.
+                </p>
+                <p>
+                  One application I keep in mind is assistive robotics. I would like robots to move safely through homes they have never seen and help older adults and people with disabilities with everyday chores.
+                </p>
+                <p>
+                  Some papers are <span class="highlight">highlighted</span>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+<tr>
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <img src='images/trial.jpg' width="160">
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <span class="papertitle">TRIAL: Agentic Red-Teaming for Physical Safety in Robot Foundation Models</span>
+    <br>
+    Anonymous submission
+    <br>
+    <em>Under review</em>, 2026
+    <p></p>
+    <p>
+    TRIAL uses LLM strategists and MAP-Elites to search over visible and hidden scene factors, such as object mass, placement, and lighting. Across four robot policies it finds many rollouts that complete the task but break a safety constraint, which a success-only benchmark would miss.
+    </p>
+  </td>
+</tr>
+
+
+<tr>
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <img src='images/tool_survey.svg' width="160">
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://doi.org/10.1109/CAI68641.2026.11536377">
+      <span class="papertitle">Tool and Agent Selection for Large Language Model Agents in Production: A Survey</span>
+    </a>
+    <br>
+    Elias Lumer,
+    Anmol Gulati,
+    <strong>Faheem Nizar</strong>,
+    Dzmitry Hedroits,
+    Atharva Mehta,
+    Henry Hwangbo,
+    Vamse Kumar Subbiah,
+    Pradeep Honaganahalli Basavaraju,
+    James A. Burke
+    <br>
+    <em>IEEE CAI</em>, 2026
+    <br>
+    <a href="https://doi.org/10.1109/CAI68641.2026.11536377">paper</a>
+    /
+    <a href="https://www.preprints.org/manuscript/202512.1050/v1">preprint</a>
+    <p></p>
+    <p>
+    A survey of how LLM agents select tools in production systems. We split the problem into the frontend, where users pick tools through buttons, slash commands, or plain language, and the backend, which covers retrieval, execution, orchestration, memory, and evaluation.
+    </p>
+  </td>
+</tr>
+
+
+<tr bgcolor="#ffffd0">
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <img src='images/agent_as_graph.jpg' width="160">
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://arxiv.org/abs/2511.18194">
+      <span class="papertitle">Agent-as-a-Graph: Knowledge Graph-Based Tool and Agent Retrieval for LLM Multi-Agent Systems</span>
+    </a>
+    <br>
+    <strong>Faheem Nizar</strong>,
+    Elias Lumer,
+    Anmol Gulati,
+    Pradeep Honaganahalli Basavaraju,
+    Vamse Kumar Subbiah
+    <br>
+    <em>ICAART</em>, 2026
+    <br>
+    <a href="https://doi.org/10.5220/0014473600004052">paper</a>
+    /
+    <a href="https://arxiv.org/abs/2511.18194">arXiv</a>
+    <p></p>
+    <p>
+    We put tools and their parent agents into one knowledge graph. Vector search finds candidate tools and agents, weighted rank fusion reranks them, and graph traversal maps tools back to their agents. This raises Recall@5 by 14.9% over prior retrievers on LiveMCPBench.
+    </p>
+  </td>
+</tr>
+
+
+<tr>
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <img src='images/prompt_cache.jpg' width="160">
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://arxiv.org/abs/2601.06007">
+      <span class="papertitle">Don't Break the Cache: An Evaluation of Prompt Caching for Long-Horizon Agentic Tasks</span>
+    </a>
+    <br>
+    Elias Lumer,
+    <strong>Faheem Nizar</strong>,
+    A. Jangiti,
+    K. Frank,
+    Anmol Gulati,
+    M. Phadate,
+    Vamse Kumar Subbiah
+    <br>
+    <em>arXiv</em>, 2026
+    <br>
+    <a href="https://arxiv.org/abs/2601.06007">arXiv</a>
+    <p></p>
+    <p>
+    We measure how prompt caching affects long agent sessions across several providers. Keeping the start of the prompt stable cuts cost by up to about 80% and also lowers time to first token.
+    </p>
+  </td>
+</tr>
+
+
+<tr>
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <img src='images/tool_to_agent.jpg' width="160">
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://arxiv.org/abs/2511.01854">
+      <span class="papertitle">Tool-to-Agent Retrieval: Bridging Tools and Agents for Scalable LLM Multi-Agent Systems</span>
+    </a>
+    <br>
+    Elias Lumer,
+    <strong>Faheem Nizar</strong>,
+    Anmol Gulati,
+    Pradeep Honaganahalli Basavaraju,
+    Vamse Kumar Subbiah
+    <br>
+    <em>arXiv</em>, 2025
+    <br>
+    <a href="https://arxiv.org/abs/2511.01854">arXiv</a>
+    <p></p>
+    <p>
+    Tools and agents share one vector space. When the retriever finds a matching tool, it returns that tool's parent agent, which routes queries better than matching against agent descriptions alone.
+    </p>
+  </td>
+</tr>
+
+
+<tr>
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <img src='images/enadl.jpg' width="160">
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://doi.org/10.1109/TR.2025.3540891">
+      <span class="papertitle">ENADL: Towards Performance Improvement of IoT Networks Using Deep Learning-Based Node Fault Prediction</span>
+    </a>
+    <br>
+    <a href="https://scholar.google.com/scholar?q=Shraddha+Tripathi">Shraddha Tripathi</a>,
+    <strong>Faheem Nizar</strong>,
+    <a href="https://scholar.google.com/scholar?q=Om+Jee+Pandey">Om Jee Pandey</a>,
+    <a href="https://home.iitk.ac.in/~sandhan/">Tushar Sandhan</a>,
+    <a href="https://home.iitk.ac.in/~rhegde/">Rajesh M. Hegde</a>
+    <br>
+    <em>IEEE Transactions on Reliability</em>, 2025
+    <br>
+    <a href="https://doi.org/10.1109/TR.2025.3540891">paper</a>
+    /
+    <a href="https://drive.google.com/file/d/1de2AY0Q4vGFgIiQ7ZY76IkRbfQ4ZHs78">pdf</a>
+    <p></p>
+    <p>
+    A graph neural network uses node and edge features to predict which IoT devices are about to fail, with 98% accuracy. The network then routes data around those devices and assigns energy based on node centrality, which extends network lifetime.
+    </p>
+  </td>
+</tr>
+
+
+<tr onmouseout="tvcg_stop()" onmouseover="tvcg_start()" bgcolor="#ffffd0">
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='tvcg_image'>
+        <img src='images/tvcg_after.jpg' width="160">
+      </div>
+      <img src='images/tvcg_before.jpg' width="160">
+    </div>
+    <script type="text/javascript">
+      function tvcg_start() {
+        document.getElementById('tvcg_image').style.opacity = "1";
+      }
+
+      function tvcg_stop() {
+        document.getElementById('tvcg_image').style.opacity = "0";
+      }
+      tvcg_stop()
+    </script>
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://arxiv.org/abs/2406.18545">
+      <span class="papertitle">Visual Analysis of Prediction Uncertainty in Neural Networks for Deep Image Synthesis</span>
+    </a>
+    <br>
+    <a href="https://www.cse.iitk.ac.in/users/soumyad/">Soumya Dutta</a>,
+    <strong>Faheem Nizar</strong>,
+    <a href="https://scholar.google.com/scholar?q=Ahmad+Amaan">Ahmad Amaan</a>,
+    <a href="https://scholar.google.com/scholar?q=Ayan+Acharya">Ayan Acharya</a>
+    <br>
+    <em>IEEE TVCG</em>, 2024
+    <br>
+    <a href="https://doi.org/10.1109/TVCG.2024.3406959">paper</a>
+    /
+    <a href="https://arxiv.org/abs/2406.18545">arXiv</a>
+    <p></p>
+    <p>
+    We compare deep ensembles and MC-Dropout for estimating per-pixel uncertainty, error, and sensitivity in volume-rendered image synthesis. An interactive tool lets users explore these estimates across all viewpoints.
+    </p>
+  </td>
+</tr>
+
+
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Projects</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr>
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <img src='../my images/image.png' width="160">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <span class="papertitle">Stress-Testing Robot Foundation Models</span>
+                <br>
+                <em>PwC US</em>, 2025 to present
+                <p>I benchmark open-source VLA policies and use LLM agents to suggest new scenarios where they might fail. Each policy gets a written report of its failure modes. This work led to a physical AI lab with WidowX arms and dedicated GPUs.</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <img src='images/stmc.jpg' width="160">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <span class="papertitle">Text-to-3D Character Motion Generation</span>
+                <br>
+                <em>PwC US</em>, 2025
+                <br>
+                <a href="https://github.com/nv-tlabs/stmc">STMC code</a>
+                /
+                <a href="https://mathis.petrovich.fr/stmc">STMC project page</a>
+                <p>A system that generates 3D character motion from text prompts for a gaming client. It builds on STMC, which lets several text prompts run on a shared timeline, so a character can walk, raise a hand, and wave at overlapping times. It lowers the motion-capture cost of animating NPCs.</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <img src='images/gencast.jpg' width="95">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <span class="papertitle">GenCast Hurricane Forecasting</span>
+                <br>
+                <em>FutureSprint Hackathon</em>, 2025
+                <br>
+                <a href="https://www.nature.com/articles/s41586-024-08252-9">GenCast paper</a>
+                <p>GenCast is a diffusion model that forecasts the weather by refining random noise into a full global weather state, one step at a time. I ran the GenCast mini ensemble on ECMWF data to forecast 15-day hurricane tracks, mapped the tracks to affected zip codes, and generated reports for stakeholders with a web-search agent.</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <img src='images/uav.svg' width="110">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <span class="papertitle">Real-Time UAV Antenna Tracker</span>
+                <br>
+                <em>SURGE, IIT Kanpur</em>, 2022
+                <p>A system that keeps long-range, low-latency links between UAVs and a ground station. It uses MAVLink telemetry over ESP-NOW, a self-healing BATMAN mesh on Raspberry Pis, stepper motors driven by a Pixhawk, and YOLOv5 to track the drone visually at short range.</p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+					<table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+            <tr>
+              <td>
+                <h2>Miscellanea</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+						     <div class="colored-box" style="background-color: #fcb97d;">
+								 <h2>Experience</h2>
+								 </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://www.pwc.com/us/en.html">Senior Associate, Data Scientist, PwC US, 2024 to present</a>
+                <br>
+                <a href="https://www.americanexpress.com/">Data Analyst Intern (PPO), American Express, 2023</a>
+                <br>
+                <a href="https://www.iitk.ac.in/">Undergraduate Researcher, IIT Kanpur, 2022 to 2024</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+						     <div class="colored-box" style="background-color: #aaba9e;">
+								 <h2>Education</h2>
+								 </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:center">
+                <a href="https://www.iitk.ac.in/">B.Tech in Electrical Engineering, Minor in Machine Learning, IIT Kanpur, 2020 to 2024</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+						     <div class="colored-box" style="background-color: #c6b89e;">
+								 <h2>Awards</h2>
+								 </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:center">
+                Academic Distinction, IIT Kanpur, 2024
+                <br>
+                First Place, IoT Innovation Contest, PwC FutureThink Cloud Innovation Summit, 2024
+                <br>
+                SURGE Scholar, IIT Kanpur, 2022
+                <br>
+                All India Rank 1136, JEE Advanced, 2020
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+						     <div class="colored-box" style="background-color: #edd892;">
+								 <h2>Service</h2>
+								 </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:center">
+                Learning &amp; Development Lead, PwC Data Science Team (46 members), 2024 to present
+                <br>
+                Head of Web Development, Academics and Career Council, IIT Kanpur, 2022 to 2023
+              </td>
+            </tr>
+
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Website template from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
