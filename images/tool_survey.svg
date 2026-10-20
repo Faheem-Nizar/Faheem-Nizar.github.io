@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="Times New Roman, serif" font-weight="bold">
+  <rect width="400" height="300" fill="#ffffff"/>
+  <rect x="20" y="16" width="360" height="40" fill="#f3f3f3" stroke="#e0a030" stroke-width="2"/>
+  <text x="200" y="42" font-size="18" text-anchor="middle">User Query</text>
+  <line x1="200" y1="56" x2="200" y2="78" stroke="#000" stroke-width="1.5"/>
+  <polygon points="195,74 205,74 200,82" fill="#000"/>
+
+  <rect x="20" y="84" width="360" height="76" rx="6" fill="#f8dde0" stroke="#c88" stroke-width="1.5"/>
+  <text x="32" y="102" font-size="14" font-style="italic">Frontend</text>
+  <g font-size="13" text-anchor="middle">
+    <polygon points="40,148 58,112 128,112 110,148" fill="#d6e4f7" stroke="#4a6fa5"/>
+    <text x="84" y="135">Buttons</text>
+    <polygon points="146,148 164,112 244,112 226,148" fill="#d6e4f7" stroke="#4a6fa5"/>
+    <text x="195" y="135">/commands</text>
+    <polygon points="262,148 280,112 370,112 352,148" fill="#d6e4f7" stroke="#4a6fa5"/>
+    <text x="316" y="135">Language</text>
+  </g>
+
+  <line x1="200" y1="160" x2="200" y2="176" stroke="#000" stroke-width="1.5"/>
+  <polygon points="195,172 205,172 200,180" fill="#000"/>
+
+  <rect x="20" y="182" width="360" height="104" rx="6" fill="#f3f3f3" stroke="#888" stroke-width="1.5"/>
+  <text x="32" y="200" font-size="14" font-style="italic">Backend</text>
+  <g font-size="13" text-anchor="middle">
+    <polygon points="34,240 50,208 132,208 116,240" fill="#fde2c4" stroke="#c98a3c"/>
+    <text x="83" y="229">Retrieval</text>
+    <polygon points="142,240 158,208 242,208 226,240" fill="#fde2c4" stroke="#c98a3c"/>
+    <text x="192" y="229">Execution</text>
+    <polygon points="252,240 268,208 368,208 352,240" fill="#fde2c4" stroke="#c98a3c"/>
+    <text x="310" y="229">Orchestration</text>
+    <polygon points="88,278 104,248 192,248 176,278" fill="#d6e4f7" stroke="#4a6fa5"/>
+    <text x="140" y="268">Memory</text>
+    <polygon points="206,278 222,248 318,248 302,278" fill="#d6e4f7" stroke="#4a6fa5"/>
+    <text x="262" y="268">Evaluation</text>
+  </g>
+</svg>
