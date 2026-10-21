@@ -130,13 +130,20 @@ h2 {
   -webkit-transition: opacity .2s ease-in-out;
 }
 
-span.highlight {
-  background-color: #ffffd0;
+.pub-button {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #1772d0;
+  border-radius: 6px;
+  transition: color .2s ease-in-out, border-color .2s ease-in-out;
 }
 
-.colored-box {
-    color: black;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 10px;
+.pub-button:focus,
+.pub-button:hover {
+  border-color: #f09228;
+}
+
+a.name-link {
+  color: inherit;
+  font-size: inherit;
 }

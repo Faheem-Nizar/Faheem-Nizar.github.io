@@ -26,11 +26,13 @@
                   Faheem Nizar
                 </p>
                 <p>
-                  I'm a Senior Associate (Data Scientist) at <a href="https://www.pwc.com/us/en.html">PwC US</a> in Bengaluru. I build agentic AI systems, and I lead a small group that tests robot foundation models for safety. That work led PwC to set up a robotics lab with <a href="https://www.trossenrobotics.com/widowx-250">WidowX</a> arms.
-                  At PwC I have also worked on tool and agent retrieval for LLM multi-agent systems, prompt caching, text-to-3D character motion, and causal knowledge graphs for anomaly detection.
+                  I'm a Senior Associate (Data Scientist) at <a href="https://www.pwc.com/us/en.html">PwC US</a> in Bengaluru. I work with PwC's advisory teams to build AI and machine learning solutions. I also drive PwC's Physical AI Lab, where we fine-tune and test vision-language-action models on <a href="https://www.trossenrobotics.com/widowx-ai">WidowX</a> arms and run assurance/safety tests on robot policies.
                 </p>
                 <p>
                   I did my B.Tech in Electrical Engineering, with a minor in Machine Learning, at <a href="https://www.iitk.ac.in/">IIT Kanpur</a>. There I worked with <a href="https://www.cse.iitk.ac.in/users/soumyad/">Soumya Dutta</a> on uncertainty in deep image synthesis, with <a href="https://home.iitk.ac.in/~sandhan/">Tushar Sandhan</a> on graph deep learning for fault prediction, and with <a href="https://home.iitk.ac.in/~gkrabhi/">Abhishek K. Gupta</a> on UAV antenna tracking as a SURGE scholar.
+                </p>
+                <p>
+                  Outside of work, I voraciously read about history, cook some neat recipes, and travel to some really underrated places.
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:faheemnizar01@gmail.com">Email</a> &nbsp;/&nbsp;
@@ -49,18 +51,21 @@
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p>
-                  I work on 3D scene understanding, embodied computer vision, and robot learning. Most of my projects come back to the same question. How can we tell when a learned system is about to fail, and how can we make it more reliable? For robots this matters a lot, because a wrong prediction can turn into an unsafe action.
+                  I work mostly on agentic AI, especially LLM multi-agent systems and hosted agents. I have studied how to retrieve the right tool or agent for a query, how prompt caching affects cost and latency over long agent sessions, and how tool selection works in production systems.
                 </p>
                 <p>
-                  Right now I want to study how vision-language-action models (VLAs) and world action models represent the physical world, and how to detect when they are likely to fail in an unfamiliar environment. I think 3D scene representations can help here. Geometry and spatial relationships learned from images and video could help policies handle new objects and tasks.
-                  I am also interested in uncertainty estimation under distribution shift, red-teaming robot policies before deployment, physics-aware world models, motion planning, and 3D motion generation. On the practical side, I care about making large models fast and cheap enough to run in real time.
+                  I also work on physical AI. In our lab I fine-tune vision-language-action models on robot data we collect ourselves, and I use LLM agents to red-team robot policies by searching for the scenes where they fail before deployment.
                 </p>
                 <p>
-                  One application I keep in mind is assistive robotics. I would like robots to move safely through homes they have never seen and help older adults and people with disabilities with everyday chores.
+                  The common thread is reliability. Whether it is an agent picking the wrong tool or a robot policy in an unfamiliar scene, I want to know when a learned system is likely to fail and how to make it more dependable. This interest started with my undergraduate work on uncertainty in neural networks.
                 </p>
-                <p>
-                  Some papers are <span class="highlight">highlighted</span>.
-                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Publications</h2>
               </td>
             </tr>
           </tbody></table>
@@ -86,38 +91,6 @@
 
 
 <tr>
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src='images/tool_survey.svg' width="160">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://doi.org/10.1109/CAI68641.2026.11536377">
-      <span class="papertitle">Tool and Agent Selection for Large Language Model Agents in Production: A Survey</span>
-    </a>
-    <br>
-    Elias Lumer,
-    Anmol Gulati,
-    <strong>Faheem Nizar</strong>,
-    Dzmitry Hedroits,
-    Atharva Mehta,
-    Henry Hwangbo,
-    Vamse Kumar Subbiah,
-    Pradeep Honaganahalli Basavaraju,
-    James A. Burke
-    <br>
-    <em>IEEE CAI</em>, 2026
-    <br>
-    <a href="https://doi.org/10.1109/CAI68641.2026.11536377">paper</a>
-    /
-    <a href="https://www.preprints.org/manuscript/202512.1050/v1">preprint</a>
-    <p></p>
-    <p>
-    A survey of how LLM agents select tools in production systems. We split the problem into the frontend, where users pick tools through buttons, slash commands, or plain language, and the backend, which covers retrieval, execution, orchestration, memory, and evaluation.
-    </p>
-  </td>
-</tr>
-
-
-<tr bgcolor="#ffffd0">
   <td style="padding:16px;width:20%;vertical-align:middle">
     <img src='images/agent_as_graph.jpg' width="160">
   </td>
@@ -145,89 +118,7 @@
 </tr>
 
 
-<tr>
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src='images/prompt_cache.jpg' width="160">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://arxiv.org/abs/2601.06007">
-      <span class="papertitle">Don't Break the Cache: An Evaluation of Prompt Caching for Long-Horizon Agentic Tasks</span>
-    </a>
-    <br>
-    Elias Lumer,
-    <strong>Faheem Nizar</strong>,
-    A. Jangiti,
-    K. Frank,
-    Anmol Gulati,
-    M. Phadate,
-    Vamse Kumar Subbiah
-    <br>
-    <em>arXiv</em>, 2026
-    <br>
-    <a href="https://arxiv.org/abs/2601.06007">arXiv</a>
-    <p></p>
-    <p>
-    We measure how prompt caching affects long agent sessions across several providers. Keeping the start of the prompt stable cuts cost by up to about 80% and also lowers time to first token.
-    </p>
-  </td>
-</tr>
-
-
-<tr>
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src='images/tool_to_agent.jpg' width="160">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://arxiv.org/abs/2511.01854">
-      <span class="papertitle">Tool-to-Agent Retrieval: Bridging Tools and Agents for Scalable LLM Multi-Agent Systems</span>
-    </a>
-    <br>
-    Elias Lumer,
-    <strong>Faheem Nizar</strong>,
-    Anmol Gulati,
-    Pradeep Honaganahalli Basavaraju,
-    Vamse Kumar Subbiah
-    <br>
-    <em>arXiv</em>, 2025
-    <br>
-    <a href="https://arxiv.org/abs/2511.01854">arXiv</a>
-    <p></p>
-    <p>
-    Tools and agents share one vector space. When the retriever finds a matching tool, it returns that tool's parent agent, which routes queries better than matching against agent descriptions alone.
-    </p>
-  </td>
-</tr>
-
-
-<tr>
-  <td style="padding:16px;width:20%;vertical-align:middle">
-    <img src='images/enadl.jpg' width="160">
-  </td>
-  <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://doi.org/10.1109/TR.2025.3540891">
-      <span class="papertitle">ENADL: Towards Performance Improvement of IoT Networks Using Deep Learning-Based Node Fault Prediction</span>
-    </a>
-    <br>
-    <a href="https://scholar.google.com/scholar?q=Shraddha+Tripathi">Shraddha Tripathi</a>,
-    <strong>Faheem Nizar</strong>,
-    <a href="https://scholar.google.com/scholar?q=Om+Jee+Pandey">Om Jee Pandey</a>,
-    <a href="https://home.iitk.ac.in/~sandhan/">Tushar Sandhan</a>,
-    <a href="https://home.iitk.ac.in/~rhegde/">Rajesh M. Hegde</a>
-    <br>
-    <em>IEEE Transactions on Reliability</em>, 2025
-    <br>
-    <a href="https://doi.org/10.1109/TR.2025.3540891">paper</a>
-    /
-    <a href="https://drive.google.com/file/d/1de2AY0Q4vGFgIiQ7ZY76IkRbfQ4ZHs78">pdf</a>
-    <p></p>
-    <p>
-    A graph neural network uses node and edge features to predict which IoT devices are about to fail, with 98% accuracy. The network then routes data around those devices and assigns energy based on node centrality, which extends network lifetime.
-    </p>
-  </td>
-</tr>
-
-
-<tr onmouseout="tvcg_stop()" onmouseover="tvcg_start()" bgcolor="#ffffd0">
+<tr onmouseout="tvcg_stop()" onmouseover="tvcg_start()">
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='tvcg_image'>
@@ -270,6 +161,13 @@
 
 
           </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:8px 16px 16px 16px;width:100%;text-align:center">
+                <a href="publications.html" class="pub-button">View all publications &rarr;</a>
+              </td>
+            </tr>
+          </tbody></table>
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
@@ -280,9 +178,43 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+            <tr onmouseout="pi05_stop()" onmouseover="pi05_start()">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one" style="height:107px">
+                  <div class="two" id='pi05_image' style="height:107px">
+                    <img src='images/pi05_mujoco.jpg' width="160">
+                  </div>
+                  <img src='images/pi05_arch.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function pi05_start() {
+                    document.getElementById('pi05_image').style.opacity = "1";
+                  }
+
+                  function pi05_stop() {
+                    document.getElementById('pi05_image').style.opacity = "0";
+                  }
+                  pi05_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <span class="papertitle">Fine-Tuning π0.5 on a Custom WidowX Dataset</span>
+                <br>
+                <em>PwC US</em>, 2026
+                <br>
+                <a href="https://drive.google.com/drive/folders/12RPSUhFfSI9uGe1X1l7ART3k0TXeqlo1?usp=sharing">dataset episodes</a>
+                /
+                <a href="https://arxiv.org/abs/2504.16054">π0.5 paper</a>
+                <p>I recorded 70 teleoperated pick-and-place episodes on a WidowX arm and fine-tuned π0.5 on them with LoRA, then tested the checkpoints in a MuJoCo scene. Hover to see the simulator.
+                  <span id="pi05_more" style="display:none">
+                  Each episode has a top camera (640×480), a wrist camera (1280×720), six joint positions, gripper state, actions, and a language prompt at 20 Hz. I converted them to LeRobot v2.1 format, giving 56 training, 7 validation, and 7 test episodes, about 35,600 frames in total. Training used JAX on a single A100 40 GB GPU on Google Cloud for 10,000 steps at batch size 32. The model takes both camera views, the 7-dimensional robot state, and the task prompt, and predicts 20-step action chunks for the six joints and the gripper. Checkpoints are served over WebSocket through SSH port forwarding.</span>
+                  <a href="javascript:void(0)" onclick="var m=document.getElementById('pi05_more'),open=m.style.display==='none';m.style.display=open?'inline':'none';this.textContent=open?'less':'more'">more</a></p>
+              </td>
+            </tr>
+
             <tr>
               <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src='../my images/image.png' width="160">
+                <img src='./images/trossen_arm.png' width="160">
               </td>
               <td style="padding:8px;width:80%;vertical-align:middle">
                 <span class="papertitle">Stress-Testing Robot Foundation Models</span>
@@ -336,71 +268,45 @@
 
           </tbody></table>
 
-					<table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td>
-                <h2>Miscellanea</h2>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Experience</h2>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
             <tr>
-              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
-						     <div class="colored-box" style="background-color: #fcb97d;">
-								 <h2>Experience</h2>
-								 </div>
+              <td style="padding:8px 16px;width:20%;vertical-align:middle">
+                <a href="https://www.pwc.com/us/en.html"><img src="images/pwc.svg" width="64"></a>
               </td>
               <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://www.pwc.com/us/en.html">Senior Associate, Data Scientist, PwC US, 2024 to present</a>
+                Senior Associate, Data Scientist
                 <br>
-                <a href="https://www.americanexpress.com/">Data Analyst Intern (PPO), American Express, 2023</a>
-                <br>
-                <a href="https://www.iitk.ac.in/">Undergraduate Researcher, IIT Kanpur, 2022 to 2024</a>
+                <a href="https://www.pwc.com/us/en.html">PwC US</a>, 2024 to present
               </td>
             </tr>
-
             <tr>
-              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
-						     <div class="colored-box" style="background-color: #aaba9e;">
-								 <h2>Education</h2>
-								 </div>
+              <td style="padding:8px 16px;width:20%;vertical-align:middle">
+                <a href="https://www.americanexpress.com/"><img src="images/amex.svg" width="40"></a>
               </td>
-              <td style="padding:8px;width:80%;vertical-align:center">
-                <a href="https://www.iitk.ac.in/">B.Tech in Electrical Engineering, Minor in Machine Learning, IIT Kanpur, 2020 to 2024</a>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                Data Analyst Intern
+                <br>
+                <a href="https://www.americanexpress.com/">American Express</a>, 2023
               </td>
             </tr>
-
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
-						     <div class="colored-box" style="background-color: #c6b89e;">
-								 <h2>Awards</h2>
-								 </div>
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:center">
-                Academic Distinction, IIT Kanpur, 2024
-                <br>
-                First Place, IoT Innovation Contest, PwC FutureThink Cloud Innovation Summit, 2024
-                <br>
-                SURGE Scholar, IIT Kanpur, 2022
-                <br>
-                All India Rank 1136, JEE Advanced, 2020
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Awards</h2>
+                <p style="margin:10px 0 6px 20px"><strong>Academic Distinction, IIT Kanpur, 2024:</strong> Given for excellent academic performance.</p>
+                <p style="margin:0 0 6px 20px"><strong>First Place, IoT Innovation Contest, PwC FutureThink Cloud Innovation Summit, 2024:</strong> IoT kiosk that combined face detection with a conversational assistant.</p>
+                <p style="margin:0 0 6px 20px"><strong>SURGE Scholar, IIT Kanpur, 2022:</strong> Summer research fellowship, worked on the UAV antenna tracker project.</p>
+                <p style="margin:0 0 0 20px"><strong>All India Rank 1136, JEE Advanced, 2020:</strong> Rank in the JEE Advanced examination.</p>
               </td>
             </tr>
-
-            <tr>
-              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
-						     <div class="colored-box" style="background-color: #edd892;">
-								 <h2>Service</h2>
-								 </div>
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:center">
-                Learning &amp; Development Lead, PwC Data Science Team (46 members), 2024 to present
-                <br>
-                Head of Web Development, Academics and Career Council, IIT Kanpur, 2022 to 2023
-              </td>
-            </tr>
-
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
