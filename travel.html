@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Faheem Nizar | History and Travel</title>
+
+    <meta name="author" content="Faheem Nizar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style>
+      .tabs { text-align: center; margin: 8px 0 20px 0; }
+      .tab {
+        display: inline-block;
+        padding: 6px 16px;
+        margin: 0 4px;
+        border: 1px solid #ddd;
+        border-radius: 16px;
+        color: #444;
+        cursor: pointer;
+        user-select: none;
+      }
+      .tab:hover { border-color: #f09228; color: #f09228; }
+      .tab.active { background: #1772d0; border-color: #1772d0; color: #fff; }
+
+      .place { margin: 28px 0 10px 0; }
+      .place h3 {
+        margin: 0;
+        font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .place p { margin: 2px 0 0 0; color: #666; }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      @media (max-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+
+      .card { cursor: pointer; }
+      .card .frame {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        border-radius: 8px;
+        background: #f2f2f2;
+      }
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform .3s ease;
+      }
+      .card:hover img { transform: scale(1.04); }
+      .card .title { margin: 8px 0 2px 0; font-weight: 700; }
+      .card .desc { margin: 0; color: #555; line-height: 1.35; }
+
+      #lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, .88);
+        z-index: 10;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      #lightbox.open { display: flex; }
+      #lightbox img { max-width: 90vw; max-height: 78vh; border-radius: 6px; }
+      #lightbox .caption { color: #eee; max-width: 640px; text-align: center; margin-top: 14px; }
+      #lightbox .caption b { color: #fff; }
+      #lightbox .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 40px;
+        padding: 16px;
+        cursor: pointer;
+        user-select: none;
+      }
+      #lightbox .prev { left: 8px; }
+      #lightbox .next { right: 8px; }
+      #lightbox .close { position: absolute; top: 10px; right: 20px; color: #fff; font-size: 32px; cursor: pointer; }
+    </style>
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:16px">
+          <p style="margin:0"><a href="index.html">&larr; Back to home</a></p>
+          <p class="name" style="text-align:center;margin-bottom:4px">My Clicks</p>
+          <p style="text-align:center;color:#555;margin-top:0">A short diary of some fascinating places I've been to and some clicks.</p>
+
+          <div class="tabs">
+            <span class="tab" data-filter="travel">Travel</span>
+            <span class="tab" data-filter="history">History</span>
+          </div>
+
+          <div id="gallery"></div>
+
+          
+        </td>
+      </tr>
+    </tbody></table>
+
+    <div id="lightbox">
+      <span class="close" title="Close">&times;</span>
+      <span class="nav prev" title="Previous">&#8249;</span>
+      <img alt="">
+      <div class="caption"></div>
+      <span class="nav next" title="Next">&#8250;</span>
+    </div>
+
+    <script>
+      var places = [
+        { name: "Egypt", blurb: "The cradle of civilization" },
+        { name: "India", blurb: "Motherland" },
+        { name: "Saudi Arabia", blurb: "Where I grew up..." },
+        { name: "Random", blurb: "Some nice pics that looked cool at the time" }
+      ];
+
+      // history: true puts a photo in the History tab. Travel shows every photo.
+      var photos = [
+        { id: 15, place: "Egypt", history: true,  title: "Al-Ahram", desc: "The Great Pyramids. As old as Human History (literally)! Went inside those beasts.. really is awe inspiring. Narrow passageways and steep climbs. Did feel like real life Assassins Creed Origins" },
+        { id: 14, place: "Egypt", history: true,  title: "Karnak", desc: "The largest temple complex in Egypt. Built over centuries, with successive kings (and one ambitious queen) erasing each others work and attributing it to themselves xD... Quite the expansive temple though!" },
+        { id: 10, place: "Egypt", history: true,  title: "The Sunken Temple", desc: "Philae temple. Built in the middle of the nile. The aswan dam literally sunk the temple below its threshold till they disassembled and reassembled the temple in a nearby island. Realluy beautiful views overall" },
+        { id: 20, place: "Egypt", history: false, title: "Icarus?", desc: "An early morning excursion to fly over the valley of kings. The views of hundreds of balloons taking off in the misty morning along the reeds of the Nile bank was truely a sight" },
+        { id: 17, place: "Egypt", history: true, title: "'Meditations' Man", desc: "Marcus Antoninus Aurelius, philosopher and part time emperor of Rome! Not my favourite emperor, but truly a Titan. This beast of a statue was in Alexandria, called 'the ghost of a city', and the statue was just something. From the end of the room, seeing it in all its glory gave me goosebumps" },
+        { id: 16, place: "Egypt", history: true,  title: "Saladin", desc: "Medieval castle in the middle of Cairo, by Salah-Ad-Din ibn Ayubb. And it was quite the medieval castle" },
+
+
+        { id: 3,  place: "India", history: true, align: "top",  title: "The Jewel", desc: "A memorial of masterful architecture. Built right at the peak of Mughal Power" },
+        { id: 5,  place: "India", history: false, title: "River of Clouds", desc: "Mussourie. A beautiful hillstation in the North, in Uttarakand" },
+        { id: 12, place: "India", history: true,  title: "Kill-Zone", desc: "The moat and castle walls of the Red Fort. Conventionally the kill zone for any invading armies" },
+        { id: 2,  place: "India", history: false, title: "Manjummel", desc: "Kodaikanal, Tamil Nadu, in the south. The location for the famous Dolphin Peak and the more recently famous Guna Caves" },
+        { id: 6,  place: "India", history: false, title: "Campus@Spring", desc: "IIT Kanpur during spring time is a blast. The climate is just perfect, all the shops serve the best Chaats around, and the trees tend to turn this shade of red!!!" },
+
+        { id: 4,  place: "Saudi Arabia", history: false, title: "Oasis", desc: "Wadi Al-Dissah, in the ancient Nabatean regions in the northwest of the kingdom. The greenery due to the oasis and the vibrant rocks give total 'Lawrence of Arabia vibes'" },
+        { id: 19, place: "Saudi Arabia", history: true,  title: "Random Ruins", desc: "While on a drive across the western mountains of Saudi, I randomly stumbled upon these massive ruins. No signs, no markings, no humans, just mountains and this massive fort. I later saw the whole area is dotted with such ruins. Its located near Abha to the southwest" },
+        { id: 18, place: "Saudi Arabia", history: false, title: "On the Rocks", desc: "During the drive across the desert, saw some cool rocks and felt like Nathan Drake and started climbing" },
+
+        { id: 7,  place: "Random", history: false,  title: "Liminal", desc: "In my apartment corridor, during a bright sunny day" },
+        { id: 1,  place: "Random", history: false, title: "Sunset at the Pool", desc: "At a back yard pool that oversaw the sunset. Pretty cool" },
+        { id: 9,  place: "Random", history: false, align: "bottom", title: "Lone survivor", desc: "A tree, who knows how old, atop the Nubian Village in Aswan, near the Egypt Sudan Border" },
+        { id: 8,  place: "Random", history: true, title: "The Nubian", desc: "A shepard wantering the bank of the Nile, at Aswan. Aswan was the gateway from Egypt to Nubia and Axum, gateway for trade in Gums, Spices and most importantly for ancient civilizations, gold" },
+        { id: 11, place: "Random", history: false, title: "Inverse Teardrops", desc: "The small town of Karnak, where ancient temples and tombs from the late kingdom have dotted the space" },
+        { id: 13, place: "Random", history: true,  title: "Restoration", desc: "The pillars at Karnak Temple, with many hollywood movies shot here" },
+        
+      ];
+
+      var gallery = document.getElementById("gallery");
+      var lightbox = document.getElementById("lightbox");
+      var lbImg = lightbox.querySelector("img");
+      var lbCap = lightbox.querySelector(".caption");
+      var visible = [];
+      var current = 0;
+
+      function render(filter) {
+        gallery.innerHTML = "";
+        visible = [];
+        places.forEach(function (place) {
+          var items = photos.filter(function (p) {
+            return p.place === place.name && (filter === "travel" || p.history);
+          });
+          if (!items.length) return;
+
+          var head = document.createElement("div");
+          head.className = "place";
+          head.innerHTML = "<h3>" + place.name + "</h3><p>" + place.blurb + "</p>";
+          gallery.appendChild(head);
+
+          var grid = document.createElement("div");
+          grid.className = "grid";
+          items.forEach(function (p) {
+            var index = visible.length;
+            visible.push(p);
+            var card = document.createElement("div");
+            card.className = "card";
+            var crop = p.align ? ' style="object-position:' + p.align + '"' : "";
+            card.innerHTML =
+              '<div class="frame"><img loading="lazy" src="images/travel/thumb/' + p.id + '.jpg" alt="' + p.title + '"' + crop + '></div>' +
+              '<p class="title">' + p.title + '</p>' +
+              '<p class="desc">' + p.desc + '</p>';
+            card.onclick = function () { open(index); };
+            grid.appendChild(card);
+          });
+          gallery.appendChild(grid);
+        });
+
+        document.querySelectorAll(".tab").forEach(function (t) {
+          t.classList.toggle("active", t.dataset.filter === filter);
+        });
+        clampDescs();
+      }
+
+      function clampDescs() {
+        gallery.querySelectorAll(".desc").forEach(function (el) {
+          if (!el.dataset.full) el.dataset.full = el.textContent;
+          var full = el.dataset.full;
+          el.textContent = full;
+          var limit = parseFloat(getComputedStyle(el).lineHeight) * 1.5 + 1;
+          if (el.scrollHeight <= limit) return;
+          var lo = 0;
+          var hi = full.length;
+          while (lo < hi) {
+            var mid = Math.ceil((lo + hi) / 2);
+            el.textContent = full.slice(0, mid).replace(/[\s,.;:!]+$/, "") + "…";
+            if (el.scrollHeight <= limit) lo = mid;
+            else hi = mid - 1;
+          }
+          el.textContent = full.slice(0, lo).replace(/[\s,.;:!]+$/, "") + "…";
+        });
+      }
+
+      function open(i) {
+        current = (i + visible.length) % visible.length;
+        var p = visible[current];
+        lbImg.src = "images/travel/full/" + p.id + ".jpg";
+        lbImg.alt = p.title;
+        lbCap.innerHTML = "<b>" + p.title + "</b><br>" + p.desc;
+        lightbox.classList.add("open");
+      }
+
+      function close() { lightbox.classList.remove("open"); }
+
+      lightbox.querySelector(".prev").onclick = function (e) { e.stopPropagation(); open(current - 1); };
+      lightbox.querySelector(".next").onclick = function (e) { e.stopPropagation(); open(current + 1); };
+      lightbox.querySelector(".close").onclick = close;
+      lightbox.onclick = function (e) { if (e.target === lightbox) close(); };
+      document.addEventListener("keydown", function (e) {
+        if (!lightbox.classList.contains("open")) return;
+        if (e.key === "Escape") close();
+        if (e.key === "ArrowLeft") open(current - 1);
+        if (e.key === "ArrowRight") open(current + 1);
+      });
+
+      document.querySelectorAll(".tab").forEach(function (t) {
+        t.onclick = function () { location.hash = t.dataset.filter; };
+      });
+
+      function fromHash() {
+        var f = location.hash.replace("#", "");
+        render(f === "history" ? "history" : "travel");
+      }
+      window.addEventListener("resize", clampDescs);
+      window.addEventListener("hashchange", fromHash);
+      fromHash();
+    </script>
+  </body>
+</html>
